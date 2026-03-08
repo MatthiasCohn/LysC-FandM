@@ -1,0 +1,4 @@
+exclude:
+  - .rules/
+  - .skills/
+  - .docs/
