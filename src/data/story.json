@@ -1,0 +1,379 @@
+{
+  "start": {
+    "image": "/LysC-FandM/images/1.png",
+    "de": {
+      "title": "1. Entscheidungspunkt: Der Angriff des IS",
+      "text": "Der Islamische Staat (IS) überfällt die Nachbardörfer im Irak. Menschen, die sich weigern zu konvertieren, werden getötet. Straßensperren verhindern die Flucht.",
+      "choices": [
+        {
+          "text": "Bleiben und zum Islam konvertieren, um zu überleben.",
+          "next": "stay_convert"
+        },
+        {
+          "text": "Wir packen das Wichtigste und fliehen mit dem Auto in die Berge.",
+          "next": "turkey_camp"
+        },
+        {
+          "text": "Bleiben und sich weigern.",
+          "next": "stay_refuse"
+        },
+        {
+          "text": "Zu Fuß fliehen, da wir kein Auto haben.",
+          "next": "flee_foot"
+        }
+      ]
+    },
+    "en": {
+      "title": "1st Decision: The ISIS Attack",
+      "text": "The Islamic State (ISIS) is attacking neighboring villages in Iraq. People who refuse to convert are being killed. Roadblocks prevent escape.",
+      "choices": [
+        {
+          "text": "Stay and convert to Islam to survive.",
+          "next": "stay_convert"
+        },
+        {
+          "text": "We pack essentials and flee by car towards the mountains.",
+          "next": "turkey_camp"
+        },
+        {
+          "text": "Stay and refuse.",
+          "next": "stay_refuse"
+        },
+        {
+          "text": "Flee on foot since we have no car.",
+          "next": "flee_foot"
+        }
+      ]
+    }
+  },
+  "stay_convert": {
+    "de": {
+      "title": "Alternative: Bleiben und sich beugen",
+      "text": "Eine Konvertierung zum Islam, um einer sofortigen Tötung zu entgehen. Dies bedeutet den Verlust der eigenen Identität und Freiheit unter brutaler Herrschaft.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "start"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Stay and submit",
+      "text": "Converting to Islam to avoid immediate execution. This means losing one's identity and freedom under brutal rule.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "start"
+        }
+      ]
+    }
+  },
+  "stay_refuse": {
+    "de": {
+      "title": "Alternative: Bleiben und sich weigern",
+      "text": "Dies hätte unweigerlich die Festnahme, die Verschleppung oder den Tod durch Erschießen oder das Durchschneiden der Kehle bedeutet.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "start"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Stay and refuse",
+      "text": "This would inevitably mean arrest, abduction, or death by shooting or having one's throat slit.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "start"
+        }
+      ]
+    }
+  },
+  "flee_foot": {
+    "de": {
+      "title": "Alternative: Zu Fuß fliehen",
+      "text": "Für Familien ohne Fahrzeug war dies die einzige, oft tödliche Alternative, bei der die Menschen an Erschöpfung, Hitze und Nahrungsmangel auf den Straßen starben.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "start"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Flee on foot",
+      "text": "For families without a vehicle, this was the only, often fatal alternative, where people died of exhaustion, heat, and starvation on the roads.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "start"
+        }
+      ]
+    }
+  },
+  "turkey_camp": {
+    "image": "/LysC-FandM/images/2.png",
+    "de": {
+      "title": "2. Entscheidungspunkt: Flüchtlingsheim in der Türkei",
+      "text": "Die Familie ist nun in Izmir in einem vom türkischen Militär geführten Flüchtlingsheim. Sie werden gut versorgt und erhalten Geld für Lebensmittel, dürfen das Heim aber nicht verlassen.",
+      "choices": [
+        {
+          "text": "Im Flüchtlingsheim bleiben.",
+          "next": "stay_camp"
+        },
+        {
+          "text": "Wir schließen uns den Protesten an und flüchten aus dem Heim Richtung Europa.",
+          "next": "istanbul"
+        }
+      ]
+    },
+    "en": {
+      "title": "2nd Decision: Refugee Camp in Turkey",
+      "text": "The family is now in Izmir in a refugee camp run by the Turkish military. They are well cared for and receive money for food, but are not allowed to leave the camp.",
+      "choices": [
+        {
+          "text": "Stay in the refugee camp.",
+          "next": "stay_camp"
+        },
+        {
+          "text": "We join the protests and flee the camp towards Europe.",
+          "next": "istanbul"
+        }
+      ]
+    }
+  },
+  "stay_camp": {
+    "de": {
+      "title": "Alternative: Im Flüchtlingsheim bleiben",
+      "text": "Sie hätten weiterhin Sicherheit, Nahrung und finanzielle Unterstützung gehabt, hätten aber ihre Freiheit und das Ziel, nach Europa zu gelangen, aufgeben müssen.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "turkey_camp"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Stay in the camp",
+      "text": "They would have continued to have safety, food, and financial support, but would have had to give up their freedom and the goal of reaching Europe.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "turkey_camp"
+        }
+      ]
+    }
+  },
+  "istanbul": {
+    "image": "/LysC-FandM/images/3.png",
+    "de": {
+      "title": "3. Entscheidungspunkt: Weiterreise in Istanbul",
+      "text": "Nach der Flucht aus dem Heim hält sich die Familie in dreckigen, überfüllten Privatwohnungen in Istanbul versteckt. Sie brauchen Geld für die Überfahrt nach Griechenland.",
+      "choices": [
+        {
+          "text": "Besitz/Schmuck behalten.",
+          "next": "keep_jewelry"
+        },
+        {
+          "text": "Wir verkaufen alles, inklusive des geliebten Schmucks der Mutter.",
+          "next": "boat"
+        }
+      ]
+    },
+    "en": {
+      "title": "3rd Decision: Journey through Istanbul",
+      "text": "After fleeing the camp, the family is hiding in dirty, overcrowded private apartments in Istanbul. They need money for the crossing to Greece.",
+      "choices": [
+        {
+          "text": "We sell everything, including mother's beloved jewelry.",
+          "next": "boat"
+        },
+        {
+          "text": "Keep belongings/jewelry.",
+          "next": "keep_jewelry"
+        }
+      ]
+    }
+  },
+  "keep_jewelry": {
+    "de": {
+      "title": "Alternative: Schmuck behalten",
+      "text": "Sie hätten die Reise abbrechen oder verschieben und versuchen müssen, in den schlechten Bedingungen Istanbuls illegal zu überleben und auf andere Weise Geld zu beschaffen.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "istanbul"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Keep jewelry",
+      "text": "They would have had to cancel or postpone the journey and try to survive illegally in the poor conditions of Istanbul and raise money in other ways.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "istanbul"
+        }
+      ]
+    }
+  },
+  "boat": {
+    "image": "/LysC-FandM/images/4.png",
+    "de": {
+      "title": "4. Entscheidungspunkt: Das Schmugglerboot",
+      "text": "In tiefer Dunkelheit und Kälte. Der Schlepper ordnet an, dass kein Gepäck mitgenommen werden darf, um 30 Personen in ein kleines Boot zu quetschen.",
+      "choices": [
+        {
+          "text": "Den Einstieg verweigern.",
+          "next": "refuse_boat"
+        },
+        {
+          "text": "Wir lassen das Gepäck zurück und steigen in das überfüllte Boot.",
+          "next": "greece"
+        },
+        {
+          "text": "Laute Panik äußern.",
+          "next": "panic_boat"
+        }
+      ]
+    },
+    "en": {
+      "title": "4th Decision: The Smuggler Boat",
+      "text": "In deep darkness and cold. The smuggler orders that no luggage can be taken in order to squeeze 30 people into a small boat.",
+      "choices": [
+        {
+          "text": "Refuse to board.",
+          "next": "refuse_boat"
+        },
+        {
+          "text": "We leave the luggage behind and get into the overcrowded boat.",
+          "next": "greece"
+        },
+        {
+          "text": "Express loud panic.",
+          "next": "panic_boat"
+        }
+      ]
+    }
+  },
+  "refuse_boat": {
+    "de": {
+      "title": "Alternative: Einstieg verweigern",
+      "text": "Aus Angst vor dem Ertrinken oder dem Verlust des Gepäcks hätten sie sich weigern können. Das hätte das Ende ihrer Flucht an der türkischen Küste bedeutet.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "boat"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Refuse to board",
+      "text": "Out of fear of drowning or losing their luggage, they could have refused. That would have meant the end of their flight on the Turkish coast.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "boat"
+        }
+      ]
+    }
+  },
+  "panic_boat": {
+    "de": {
+      "title": "Alternative: Laute Panik äußern",
+      "text": "Der Impuls laut zu werden wurde unterdrückt, da türkische Boote auf dem Meer Migranten an der Überfahrt hinderten. Auffallen wäre das Ende gewesen.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "boat"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Express loud panic",
+      "text": "The impulse to be loud was suppressed because Turkish boats intercept migrants at sea. Being noticed would have been the end.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "boat"
+        }
+      ]
+    }
+  },
+  "greece": {
+    "image": "/LysC-FandM/images/5.png",
+    "de": {
+      "title": "5. Entscheidungspunkt: Weiterreise von Griechenland",
+      "text": "Nach der Ankunft in Griechenland wurden sie von Ehrenamtlichen versorgt und in ein Flüchtlingslager gebracht.",
+      "choices": [
+        {
+          "text": "Wir sammeln Geld für Schiffstickets nach Athen und reisen über die Balkanroute nach Deutschland.",
+          "next": "end"
+        },
+        {
+          "text": "In Griechenland bleiben.",
+          "next": "stay_greece"
+        }
+      ]
+    },
+    "en": {
+      "title": "5th Decision: Journey from Greece",
+      "text": "Upon arriving in Greece, they were cared for by volunteers and taken to a refugee camp.",
+      "choices": [
+        {
+          "text": "We raise money for ferry tickets to Athens and travel via the Balkan route to Germany.",
+          "next": "end"
+        },
+        {
+          "text": "Stay in Greece.",
+          "next": "stay_greece"
+        }
+      ]
+    }
+  },
+  "stay_greece": {
+    "de": {
+      "title": "Alternative: In Griechenland bleiben",
+      "text": "Sie hätten im Lager verbleiben können, sich mit der Grundversorgung zufriedengeben und auf eine langwierige Asyl-Lösung warten können.",
+      "choices": [
+        {
+          "text": "Zurück zum Entscheidungspunkt",
+          "next": "greece"
+        }
+      ]
+    },
+    "en": {
+      "title": "Alternative: Stay in Greece",
+      "text": "They could have remained in the camp, settled for basic care, and waited for a lengthy asylum solution.",
+      "choices": [
+        {
+          "text": "Return to decision point",
+          "next": "greece"
+        }
+      ]
+    }
+  },
+  "end": {
+    "de": {
+      "title": "Ankunft in Deutschland",
+      "text": "Die Familie hat nach der gefährlichen Überquerung der Balkanroute (Mazedonien, Serbien, Kroatien, Slowenien, Österreich) Deutschland erreicht. Sie haben zahllose schmerzhafte Entscheidungen getroffen und enorme Entbehrungen erduldet, um eine Chance auf ein sicheres Leben in Freiheit zu haben.",
+      "choices": [
+        {
+          "text": "Geschichte neu starten",
+          "next": "start"
+        }
+      ]
+    },
+    "en": {
+      "title": "Arrival in Germany",
+      "text": "After the dangerous crossing of the Balkan route (Macedonia, Serbia, Croatia, Slovenia, Austria), the family has reached Germany. They made countless painful decisions and endured enormous hardships to have a chance at a safe life in freedom.",
+      "choices": [
+        {
+          "text": "Restart Story",
+          "next": "start"
+        }
+      ]
+    }
+  }
+}

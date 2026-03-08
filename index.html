@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LysC-FandM - GitHub Pages</title>
+    <title>Unsere Geschichten: Chaima Kenaou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header class="app-header">
+      <div class="header-content">
+        <h1>Unsere Geschichten</h1>
+        <div class="lang-switcher">
+          <button id="btn-de" class="lang-btn active" aria-label="Auf Deutsch wechseln">DE</button>
+          <button id="btn-en" class="lang-btn" aria-label="Switch to English">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main" id="app" aria-live="polite">
+      <!-- Story content will be injected here via JS -->
+    </main>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

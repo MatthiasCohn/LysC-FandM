@@ -1,22 +1,98 @@
-import './style.css'
+// State
+let currentNodeId = 'start';
+let currentLanguage = 'de';
+let storyData = null;
 
-document.querySelector('#app').innerHTML = `
-  <div class="container">
-    <h1>Welcome to LysC-FandM!</h1>
-    <p>This project is ready for GitHub Pages deployment.</p>
-    <div class="card">
-      <button id="counter" type="button">count is 0</button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// DOM Elements
+const appDiv = document.querySelector('#app');
+const btnDe = document.querySelector('#btn-de');
+const btnEn = document.querySelector('#btn-en');
 
-let counter = 0
-const setCounter = (count) => {
-  counter = count
-  document.querySelector('#counter').innerHTML = `count is ${counter}`
+// Language Switch Event Listeners
+btnDe.addEventListener('click', () => setLanguage('de'));
+btnEn.addEventListener('click', () => setLanguage('en'));
+
+function setLanguage(lang) {
+  currentLanguage = lang;
+  
+  // Update header UI
+  btnDe.classList.toggle('active', lang === 'de');
+  btnEn.classList.toggle('active', lang === 'en');
+  
+  // Update `html lang` attribute for accessibility
+  document.documentElement.lang = lang;
+  
+  // Re-render
+  renderNode(currentNodeId);
 }
 
-document.querySelector('#counter').addEventListener('click', () => setCounter(counter + 1))
+function handleChoice(nextNodeId) {
+  currentNodeId = nextNodeId;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  renderNode(currentNodeId);
+}
+
+function renderNode(nodeId) {
+  const node = storyData[nodeId];
+  if (!node) {
+    console.error(`Node not found: ${nodeId}`);
+    return;
+  }
+
+  const content = node[currentLanguage];
+  
+  // Create HTML structure
+  let html = `<div class="story-container">`;
+  
+  if (node.image) {
+    html += `<img src="${node.image}" alt="${content.title}" class="story-image" />`;
+  }
+  
+  html += `
+    <div class="story-content">
+      <h2 class="story-title">${content.title}</h2>
+      <p class="story-text">${content.text}</p>
+      <div class="choices-container">
+  `;
+
+  content.choices.forEach(choice => {
+    // Generate safe ID for aria
+    const safeNext = choice.next.replace(/[^a-zA-Z0-9]/g, '');
+    html += `
+        <button class="choice-btn" data-next="${choice.next}" aria-label="${choice.text}">
+          ${choice.text}
+        </button>
+    `;
+  });
+
+  html += `
+      </div>
+    </div>
+  </div>`;
+
+  // Inject into DOM
+  appDiv.innerHTML = html;
+
+  // Render choice buttons interactivity
+  const choiceBtns = document.querySelectorAll('.choice-btn');
+  choiceBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const nextId = e.target.getAttribute('data-next');
+      if (nextId) handleChoice(nextId);
+    });
+  });
+}
+
+// Initial Load
+async function init() {
+  try {
+    const response = await fetch('src/data/story.json');
+    storyData = await response.json();
+    renderNode(currentNodeId);
+  } catch (error) {
+    console.error("Error loading story data:", error);
+    appDiv.innerHTML = '<p style="color:red">Fehler beim Laden der Geschichte / Error loading story.</p>';
+  }
+}
+
+init();
