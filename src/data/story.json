@@ -1,6 +1,6 @@
 {
   "start": {
-    "image": "images/1.png",
+    "image": "public/images/1.png",
     "de": {
       "title": "1. Entscheidungspunkt: Der Angriff des IS",
       "text": "Der Islamische Staat (IS) überfällt die Nachbardörfer im Irak. Menschen, die sich weigern zu konvertieren, werden getötet. Straßensperren verhindern die Flucht.",
@@ -113,7 +113,7 @@
     }
   },
   "turkey_camp": {
-    "image": "images/2.png",
+    "image": "public/images/2.png",
     "de": {
       "title": "2. Entscheidungspunkt: Flüchtlingsheim in der Türkei",
       "text": "Die Familie ist nun in Izmir in einem vom türkischen Militär geführten Flüchtlingsheim. Sie werden gut versorgt und erhalten Geld für Lebensmittel, dürfen das Heim aber nicht verlassen.",
@@ -166,7 +166,7 @@
     }
   },
   "istanbul": {
-    "image": "images/3.png",
+    "image": "public/images/3.png",
     "de": {
       "title": "3. Entscheidungspunkt: Weiterreise in Istanbul",
       "text": "Nach der Flucht aus dem Heim hält sich die Familie in dreckigen, überfüllten Privatwohnungen in Istanbul versteckt. Sie brauchen Geld für die Überfahrt nach Griechenland.",
@@ -219,7 +219,7 @@
     }
   },
   "boat": {
-    "image": "images/4.png",
+    "image": "public/images/4.png",
     "de": {
       "title": "4. Entscheidungspunkt: Das Schmugglerboot",
       "text": "In tiefer Dunkelheit und Kälte. Der Schlepper ordnet an, dass kein Gepäck mitgenommen werden darf, um 30 Personen in ein kleines Boot zu quetschen.",
@@ -302,7 +302,7 @@
     }
   },
   "greece": {
-    "image": "images/5.png",
+    "image": "public/images/5.png",
     "de": {
       "title": "5. Entscheidungspunkt: Weiterreise von Griechenland",
       "text": "Nach der Ankunft in Griechenland wurden sie von Ehrenamtlichen versorgt und in ein Flüchtlingslager gebracht.",
